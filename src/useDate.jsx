@@ -10,7 +10,10 @@ function useDate() {
             setCurrentDate(new Date())
         }, 1000)
 
-        return () => clearInterval(interval)
+        return () => {
+            clearInterval(interval)
+        }
+
     }, [])
 
     return currentDate

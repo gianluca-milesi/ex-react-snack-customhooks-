@@ -1,14 +1,14 @@
 import { useState } from "react"
 
 
-function useSwitch() {
-    const [value, setValue] = useState(false)
+function useSwitch(initialValue = false) {
+    const [isOn, setIsOn] = useState(initialValue)
 
     function toggle() {
-        setValue(!value)
+        setIsOn(!isOn)
     }
 
-    return [value, toggle]
+    return [isOn, toggle]
 }
 
 export default useSwitch
